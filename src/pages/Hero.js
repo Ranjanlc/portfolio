@@ -3,6 +3,10 @@ import './Hero.css';
 import { Link } from 'react-scroll';
 import Imu from '../assets/imu.png';
 
+const cvClickHandler = () => {
+  window.open('/assets/resume.pdf', '_blank');
+};
+
 const Hero = () => (
   <div className="hero" id="home">
     <div className="hero-overlay">
@@ -21,14 +25,8 @@ const Hero = () => (
           in hand!
         </p>
         <div className="hero-btns">
-          <button className="hire-me">
-            <a
-              href="https://drive.google.com/file/d/1Vi60ntlxG6RUNjJTAra5aozYXlsR4XLU/view?usp=sharing"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GET MY CV
-            </a>
+          <button className="hire-me" onClick={cvClickHandler}>
+            GET MY CV
           </button>
           <button className="lets-talk">
             <Link spy smooth offset={50} duration={500} to="contact">

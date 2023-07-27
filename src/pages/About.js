@@ -23,6 +23,10 @@ import MONGODB from '../assets/mongodb.png';
 import GraphQL from '../assets/graphql.png';
 import MySQl from '../assets/mysql.png';
 
+const cvClickHandler = () => {
+  window.open('/assets/resume.pdf', '_blank');
+};
+
 const About = () => (
   <section className="about" id="about">
     <div className="about-me">
@@ -36,10 +40,8 @@ const About = () => (
         With a keen eye for detail and a dedication to excellence, I strive to
         turn ideas into reality through clean and maintainable code.
       </p>
-      <button className="hire-me">
-        <a href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer">
-          GET MY CV
-        </a>
+      <button className="hire-me" onClick={cvClickHandler}>
+        GET MY CV{' '}
       </button>
     </div>
     <div className="about-skills">
